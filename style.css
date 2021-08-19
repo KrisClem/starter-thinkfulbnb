@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  border: 3px solid white;
 }
 
 h2 {
@@ -36,6 +37,10 @@ main img {
 
 /* ---  Groups & Items --- */
 
+.group img {
+  width: 100%;
+}
+
 .group {
   display: flex;
   flex-direction: column;
@@ -62,6 +67,16 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
 }
 
 header nav ul li {
@@ -117,3 +132,17 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  .group {
+    flex-direction: row;
+  }
+
+  .item-double {
+    align-self: center;
+  }
+
+  #host .item {
+    align-self: center;
+  }
+}
